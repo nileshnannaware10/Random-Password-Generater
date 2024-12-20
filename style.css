@@ -1,0 +1,137 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7e8e, #a1b2c0);
+    transition: background-color 0.3s, color 0.3s;
+    flex-direction: column;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #333333);
+    color: #ffffff;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 400px;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode input {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+body.dark-mode button:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body.dark-mode .btn {
+    background-color: #6200ee;
+}
+
+body.dark-mode .btn i {
+    color: #fff;
+}
+
+#theme-toggle i {
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+body.dark-mode footer p {
+    color: #bbb;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
